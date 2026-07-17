@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D V Fitness | Premium Modern Gym & Fitness Center</title>
+  
+  <!-- Meta tags for SEO -->
+  <meta name="description" content="Transform your body and life at D V Fitness. Discover premium strength training, cardio floor, certified personal trainers, and affordable packages. Join today!">
+  <meta name="keywords" content="DV Fitness, gym, fitness center, strength training, workout, personal trainer, BMI calculator, gym package">
+  <meta name="author" content="D V Fitness Team">
+  <link rel="canonical" href="https://dvfitness.com">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            themeDark: 'var(--bg-primary)',
+            themeCard: 'var(--bg-tertiary)',
+            themeTextSecondary: 'var(--text-secondary)',
+            accent: 'var(--accent)',
+            accentInverse: 'var(--accent-inverse)',
+            accentGray: 'var(--accent-gray)',
+            borderPrimary: 'var(--border-color)',
+            textPrimary: 'var(--text-primary)',
+            textSecondary: 'var(--text-secondary)',
+            bgPrimary: 'var(--bg-primary)',
+            bgSecondary: 'var(--bg-secondary)',
+            bgTertiary: 'var(--bg-tertiary)'
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- AOS (Animate On Scroll) CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="antialiased">
+
+  <!-- Preloader Screen -->
+  <div id="loader">
+    <div class="flex flex-col items-center gap-4">
+      <div class="spinner"></div>
+      <span class="font-bebas text-3xl tracking-widest text-white animate-pulse">D V FITNESS</span>
+    </div>
+  </div>
+
+  <!-- Header & Sticky Navigation -->
+  <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center transition-colors duration-300">
+      <!-- Logo -->
+      <a href="#home" class="flex items-center gap-2 text-2xl font-bold text-textPrimary tracking-widest font-bebas">
+        <i class="fas fa-dumbbell text-accent text-xl"></i>
+        <span>D V <span class="text-stroke text-textPrimary">FITNESS</span></span>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <div class="hidden lg:flex items-center gap-8 font-montserrat text-sm font-medium text-textPrimary">
+        <a href="#home" class="hover:text-accent transition duration-200">Home</a>
+        <a href="#about" class="hover:text-accent transition duration-200">About</a>
+        <a href="#equipment" class="hover:text-accent transition duration-200">Equipment</a>
+        <a href="#packages" class="hover:text-accent transition duration-200">Packages</a>
+        <a href="#reviews" class="hover:text-accent transition duration-200">Reviews</a>
+        <a href="#register" class="hover:text-accent transition duration-200">Register</a>
+        <a href="#contact" class="hover:text-accent transition duration-200">Contact</a>
+        <a href="documentation.html" class="hover:text-accent transition duration-200">Documentation</a>
+      </div>
+
+      <!-- Right Nav Control Buttons -->
+      <div class="hidden lg:flex items-center gap-4">
+        <!-- Theme Toggle Button -->
+        <button id="theme-toggle" class="p-2 text-textPrimary hover:text-accent transition" aria-label="Toggle Theme">
+          <i class="fas fa-sun theme-icon text-lg"></i>
+        </button>
+        <a href="#register" class="btn-premium border border-accent text-textPrimary font-montserrat font-bold text-xs py-2.5 px-6 uppercase rounded hover:text-accentInverse transition">
+          Join Now
+        </a>
+      </div>
+
+      <!-- Mobile Menu Hamburger Buttons -->
+      <div class="flex items-center gap-3 lg:hidden">
+        <button id="theme-toggle-mobile" class="p-2 text-textPrimary hover:text-accent transition" aria-label="Toggle Theme">
+          <i class="fas fa-sun theme-icon text-lg"></i>
+        </button>
+        <button id="menu-btn" class="text-textPrimary text-2xl focus:outline-none" aria-label="Toggle Navigation Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Nav Slide Panel -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-bgPrimary/95 backdrop-blur-md border-b border-borderPrimary text-textPrimary flex flex-col font-montserrat font-semibold text-center py-6 gap-5">
+      <a href="#home" class="hover:text-accent transition py-2">Home</a>
+      <a href="#about" class="hover:text-accent transition py-2">About</a>
+      <a href="#equipment" class="hover:text-accent transition py-2">Equipment</a>
+      <a href="#packages" class="hover:text-accent transition py-2">Packages</a>
+      <a href="#reviews" class="hover:text-accent transition py-2">Reviews</a>
+      <a href="#register" class="hover:text-accent transition py-2">Register</a>
+      <a href="#contact" class="hover:text-accent transition py-2">Contact</a>
+      <a href="documentation.html" class="hover:text-accent transition py-2">Documentation</a>
+      <div class="px-6 mt-4">
+        <a href="#register" class="block w-full border border-accent text-textPrimary font-bold text-xs py-3 uppercase rounded hover:bg-accent hover:text-accentInverse transition">
+          Join Now
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-zoom min-h-screen flex items-center pt-20" style="background-image: url('./assets/images/hero-bg.jpg');">
+    <div class="container mx-auto px-6 hero-content text-left w-full">
+      <div class="max-w-3xl flex flex-col gap-6" data-aos="fade-right" data-aos-duration="1000">
+        <span class="font-montserrat font-bold tracking-widest text-accent text-xs sm:text-sm uppercase flex items-center gap-2">
+          <span class="w-8 h-[1px] bg-accent/40"></span> Elite Fitness Club
+        </span>
+        <h1 class="text-5xl sm:text-7xl md:text-8xl font-bold font-bebas text-textPrimary leading-[0.95] tracking-tight">
+          TRANSFORM YOUR BODY.<br>
+          <span class="text-stroke text-textPrimary">TRANSFORM YOUR LIFE.</span>
+        </h1>
+        <p class="font-montserrat text-sm sm:text-base md:text-lg text-textSecondary font-light leading-relaxed max-w-xl">
+          Join D V Fitness and achieve your fitness goals with world-class equipment, personalized nutrition guides, and certified expert guidance.
+        </p>
+        <div class="flex flex-wrap gap-4 mt-4">
+          <a href="#register" class="btn-premium border border-accent bg-accent text-accentInverse font-montserrat font-bold text-xs sm:text-sm py-4 px-8 uppercase rounded hover:bg-transparent hover:text-accent transition duration-300">
+            Join Now
+          </a>
+          <a href="#packages" class="btn-premium-outline font-montserrat font-bold text-xs sm:text-sm py-4 px-8 uppercase rounded transition duration-300">
+            View Packages
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="py-24 bg-themeDark/30 border-b border-borderPrimary overflow-hidden">
+    <div class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <!-- About image -->
+      <div class="relative" data-aos="fade-right">
+        <div class="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-accent/40"></div>
+        <div class="absolute -bottom-4 -right-4 w-24 h-24 border-b-2 border-r-2 border-accent/40"></div>
+        <img src="./assets/images/about-gym.jpg" alt="D V Fitness Dumbbells" class="w-full h-[350px] sm:h-[450px] object-cover rounded-lg shadow-2xl relative z-10 border border-accent/20">
+      </div>
+      <!-- About text -->
+      <div class="flex flex-col gap-6" data-aos="fade-left">
+        <span class="text-accent font-bold uppercase tracking-widest text-xs">WHO WE ARE</span>
+        <h2 class="text-4xl sm:text-5xl font-bold font-bebas text-textPrimary">ABOUT D V FITNESS</h2>
+        <p class="text-textSecondary font-light leading-relaxed text-sm sm:text-base">
+          D V Fitness is dedicated to helping people build strength, improve health, and live a better lifestyle through professional training and premium equipment. Our facilities are designed to support fitness enthusiasts at all levels—from absolute beginners to elite athletes.
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-4">
+          <div class="p-5 bg-bgSecondary/40 rounded border border-borderPrimary">
+            <h3 class="text-textPrimary font-montserrat font-bold text-sm tracking-wide mb-2 uppercase flex items-center gap-2">
+              <i class="fas fa-bullseye text-accent text-xs"></i> Our Mission
+            </h3>
+            <p class="text-textSecondary text-xs font-light leading-relaxed">To provide premium resources, specialized trainers, and a strong community that inspires members to surpass their limits.</p>
+          </div>
+          <div class="p-5 bg-bgSecondary/40 rounded border border-borderPrimary">
+            <h3 class="text-textPrimary font-montserrat font-bold text-sm tracking-wide mb-2 uppercase flex items-center gap-2">
+              <i class="fas fa-eye text-accent text-xs"></i> Our Vision
+            </h3>
+            <p class="text-textSecondary text-xs font-light leading-relaxed">To become the benchmark for athletic performance and health wellness by incorporating advanced, state-of-the-art conditioning methodologies.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="py-24 bg-themeDark/50 backdrop-blur-md border-b border-borderPrimary">
+    <div class="container mx-auto px-6 text-center">
+      <div class="max-w-2xl mx-auto mb-16 flex flex-col gap-4">
+        <span class="text-accent font-bold uppercase tracking-widest text-xs">OUR BENEFITS</span>
+        <h2 class="text-4xl sm:text-5xl font-bold font-bebas text-textPrimary">WHY CHOOSE US</h2>
+        <div class="w-16 h-1 bg-accent mx-auto"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="gym-card rounded-xl p-8 text-left" data-aos="fade-up" data-aos-delay="50">
+          <div class="w-12 h-12 flex justify-center items-center bg-accent/5 border border-accent/20 rounded mb-6 text-xl text-accent">
+            <i class="fas fa-user-tie"></i>
+          </div>
+          <h3 class="text-xl font-bold font-montserrat tracking-tight mb-3 text-textPrimary">Certified Trainers</h3>
+          <p class="text-textSecondary text-sm font-light leading-relaxed">Learn from certified coaching professionals dedicated to customizing programs to fit your body type.</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="gym-card rounded-xl p-8 text-left" data-aos="fade-up" data-aos-delay="100">
+          <div class="w-12 h-12 flex justify-center items-center bg-accent/5 border border-accent/20 rounded mb-6 text-xl text-accent">
+            <i class="fas fa-dumbbell"></i>
+          </div>
+          <h3 class="text-xl font-bold font-montserrat tracking-tight mb-3 text-textPrimary">Modern Equipment</h3>
+          <p class="text-textSecondary text-sm font-light leading-relaxed">Access state of the art strength, functional, and cardio equipment imported from top fitness manufacturers.</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="gym-card rounded-xl p-8 text-left" data-aos="fade-up" data-aos-delay="150">
+          <div class="w-12 h-12 flex justify-center items-center bg-accent/5 border border-accent/20 rounded mb-6 text-xl text-accent">
+            <i class="fas fa-expand-arrows-alt"></i>
+          </div>
+          <h3 class="text-xl font-bold font-montserrat tracking-tight mb-3 text-textPrimary">Spacious Workout Area</h3>
+          <p class="text-textSecondary text-sm font-light leading-relaxed">Exercise in comfort. Our expansive layouts ensure zero crowding even during high-traffic peak hours.</p>
+        </div>
+        <!-- Card 4 -->
+        <div class="gym-card rounded-xl p-8 text-left" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-12 h-12 flex justify-center items-center bg-accent/5 border border-accent/20 rounded mb-6 text-xl text-accent">
+            <i class="fas fa-tags"></i>
+          </div>
+          <h3 class="text-xl font-bold font-montserrat tracking-tight mb-3 text-textPrimary">Affordable Packages</h3>
+          <p class="text-textSecondary text-sm font-light leading-relaxed">Choose from multiple budget-friendly monthly, quarterly, and annual subscription tiers.</p>
+        </div>
+        <!-- Card 5 -->
+        <div class="gym-card rounded-xl p-8 text-left" data-aos="fade-up" data-aos-delay="250">
+          <div class="w-12 h-12 flex justify-center items-center bg-accent/5 border border-accent/20 rounded mb-6 text-xl text-accent">
+            <i class="fas fa-heartbeat"></i>
+          </div>
+          <h3 class="text-xl font-bold font-montserrat tracking-tight mb-3 text-textPrimary">Cardio & Strength Training</h3>
+          <p class="text-textSecondary text-sm font-light leading-relaxed">Structured zones dedicated specifically to aerobic endurance, heavy free weights, and core performance.</p>
+        </div>
+        <!-- Card 6 -->
+        <div class="gym-card rounded-xl p-8 text-left" data-aos="fade-up" data-aos-delay="300">
+          <div class="w-12 h-12 flex justify-center items-center bg-accent/5 border border-accent/20 rounded mb-6 text-xl text-accent">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3 class="text-xl font-bold font-montserrat tracking-tight mb-3 text-textPrimary">Friendly Environment</h3>
+          <p class="text-textSecondary text-sm font-light leading-relaxed">Train alongside a highly motivating community of like-minded fitness fans and polite desk staff.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Statistics Counter Section -->
+  <section id="statistics" class="py-20 bg-themeDark/40 border-b border-borderPrimary relative">
+    <div class="container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div>
+        <div class="counter-val text-4xl sm:text-6xl font-bold font-bebas text-textPrimary mb-2" data-target="500" data-suffix="+">0</div>
+        <div class="text-textSecondary font-montserrat font-semibold text-xs tracking-wider uppercase">Happy Members</div>
+      </div>
+      <div>
+        <div class="counter-val text-4xl sm:text-6xl font-bold font-bebas text-textPrimary mb-2" data-target="40" data-suffix="+">0</div>
+        <div class="text-textSecondary font-montserrat font-semibold text-xs tracking-wider uppercase">Gym Machines</div>
+      </div>
+      <div>
+        <div class="counter-val text-4xl sm:text-6xl font-bold font-bebas text-textPrimary mb-2" data-target="10" data-suffix="+">0</div>
+        <div class="text-textSecondary font-montserrat font-semibold text-xs tracking-wider uppercase">Certified Trainers</div>
+      </div>
+      <div>
+        <div class="counter-val text-4xl sm:text-6xl font-bold font-bebas text-textPrimary mb-2" data-target="5" data-suffix="+">0</div>
+        <div class="text-textSecondary font-montserrat font-semibold text-xs tracking-wider uppercase">Years Experience</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Equipment Showcase Page Section -->
+  <section id="equipment" class="py-24 bg-themeDark border-b border-borderPrimary">
+    <div class="container mx-auto px-6">
+      <div class="max-w-2xl mx-auto mb-16 text-center flex flex-col gap-4">
+        <span class="text-accent font-bold uppercase tracking-widest text-xs">GYM SHOWCASE</span>
+        <h2 class="text-4xl sm:text-5xl font-bold font-bebas text-textPrimary">WORLD CLASS EQUIPMENT</h2>
+        <div class="w-16 h-1 bg-accent mx-auto mb-6"></div>
+        
+        <!-- Search and filters wrapper -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-between items-center w-full bg-bgSecondary/60 p-4 rounded-lg border border-borderPrimary">
+          <div class="relative w-full sm:w-64">
+            <input type="text" id="eq-search" placeholder="Search equipment..." class="w-full bg-bgPrimary border border-borderPrimary rounded px-4 py-2.5 pl-10 text-sm text-textPrimary focus:outline-none focus:border-accent">
+            <i class="fas fa-search absolute left-3.5 top-3.5 text-textSecondary text-xs"></i>
+          </div>
+          <!-- Category Filtering buttons -->
+          <div class="flex flex-wrap gap-2 justify-center w-full sm:w-auto">
+            <button class="eq-filter-btn text-xs font-montserrat font-bold py-2 px-4 rounded border border-accent bg-accent text-accentInverse transition" data-filter="all">All</button>
+            <button class="eq-filter-btn text-xs font-montserrat font-bold py-2 px-4 rounded border border-borderPrimary bg-transparent text-textPrimary hover:border-accent hover:text-accent transition" data-filter="strength">Strength</button>
+            <button class="eq-filter-btn text-xs font-montserrat font-bold py-2 px-4 rounded border border-borderPrimary bg-transparent text-textPrimary hover:border-accent hover:text-accent transition" data-filter="weights">Free Weights</button>
+            <button class="eq-filter-btn text-xs font-montserrat font-bold py-2 px-4 rounded border border-borderPrimary bg-transparent text-textPrimary hover:border-accent hover:text-accent transition" data-filter="cardio">Cardio</button>
+            <button class="eq-filter-btn text-xs font-montserrat font-bold py-2 px-4 rounded border border-borderPrimary bg-transparent text-textPrimary hover:border-accent hover:text-accent transition" data-filter="functional">Functional</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Equipment Cards Grid -->
+      <div id="equipment-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        <!-- Rendered dynamically by javascript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Equipment details pop-up modal -->
+  <div id="equipment-modal" class="fixed inset-0 bg-black/90 z-[999] hidden justify-center items-center p-6 backdrop-blur-sm">
+    <div class="bg-bgPrimary border border-borderPrimary rounded-xl max-w-lg w-full overflow-hidden flex flex-col relative" data-aos="zoom-in" data-aos-duration="300">
+      <button onclick="closeEquipmentModal()" class="absolute top-4 right-4 text-textPrimary hover:text-accent text-xl z-20" aria-label="Close modal">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="h-64 w-full bg-bgSecondary relative">
+        <img id="modal-img" src="" alt="" class="w-full h-full object-cover">
+      </div>
+      <div class="p-6 sm:p-8 flex flex-col gap-4">
+        <h3 id="modal-title" class="text-3xl font-bold font-bebas text-textPrimary">Equipment Name</h3>
+        <p id="modal-desc" class="text-textSecondary text-sm font-light leading-relaxed">Description goes here.</p>
+        <div class="grid grid-cols-2 gap-4 border-t border-borderPrimary pt-4">
+          <div>
+            <span class="text-[10px] font-bold text-textSecondary uppercase tracking-widest block mb-1">Target Muscle:</span>
+            <span id="modal-muscles" class="text-sm font-montserrat font-bold text-textPrimary">Muscle groups</span>
+          </div>
+          <div>
+            <span class="text-[10px] font-bold text-textSecondary uppercase tracking-widest block mb-1">Workout Level:</span>
+            <span id="modal-difficulty" class="text-sm font-montserrat font-bold text-textPrimary">Intermediate</span>
+          </div>
+        </div>
+        <div class="bg-bgSecondary/60 p-4 rounded border border-borderPrimary">
+          <span class="text-[10px] font-bold text-textSecondary uppercase tracking-widest block mb-1">D V Coach Tip:</span>
+          <p id="modal-tips" class="text-xs text-textSecondary font-light leading-relaxed">Workout tips go here.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Membership Packages Page Section -->
+  <section id="packages" class="py-24 bg-themeDark/30 border-b border-borderPrimary">
+    <div class="container mx-auto px-6">
+      <div class="max-w-2xl mx-auto mb-16 text-center flex flex-col gap-4">
+        <span class="text-accent font-bold uppercase tracking-widest text-xs">MEMBERSHIP</span>
+        <h2 class="text-4xl sm:text-5xl font-bold font-bebas text-textPrimary">MEMBERSHIP PACKAGES</h2>
+        <div class="w-16 h-1 bg-accent mx-auto"></div>
+      </div>
+
+      <!-- Plan Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch mb-16">
+        <!-- Basic Plan -->
+        <div class="gym-card rounded-xl p-8 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="50">
+          <div>
+            <span class="text-xs font-bold text-textSecondary uppercase tracking-widest block mb-2 font-montserrat">Basic Plan</span>
+            <div class="flex items-baseline gap-2 mb-6">
+              <span class="text-4xl sm:text-5xl font-bold font-bebas text-textPrimary">₹999</span>
+              <span class="text-textSecondary text-sm font-light">/ month</span>
+            </div>
+            <ul class="flex flex-col gap-4 text-sm text-textSecondary font-light mb-8">
+              <li class="flex items-center gap-3"><i class="fas fa-check text-xs text-accent"></i> General Gym Access</li>
+              <li class="flex items-center gap-3"><i class="fas fa-check text-xs text-accent"></i> Cardio Workout Floor</li>
+              <li class="flex items-center gap-3"><i class="fas fa-check text-xs text-accent"></i> Premium Locker Facility</li>
+              <li class="flex items-center gap-3 text-textMuted"><i class="fas fa-times text-xs text-textMuted"></i> Strength Machines</li>
+              <li class="flex items-center gap-3 text-textMuted"><i class="fas fa-times text-xs text-textMuted"></i> Trainer Support</li>
+            </ul>
+          </div>
+          <button onclick="selectPackageRegister('basic-plan')" class="btn-premium w-full text-center font-montserrat font-bold text-xs py-4 px-4 uppercase bg-bgSecondary border border-borderPrimary text-textPrimary rounded hover:text-accentInverse transition">
+            Join Now
+          </button>
+        </div>
+
+        <!-- Standard Plan (Highlighted) -->
+        <div class="gym-card plan-highlight rounded-xl p-8 flex flex-col justify-between bg-bgSecondary/85" data-aos="fade-up" data-aos-delay="100">
+          <div>
+            <span class="text-xs font-bold text-textPrimary uppercase tracking-widest block mb-2 font-montserrat">Standard Plan</span>
+            <div class="flex items-baseline gap-2 mb-6">
+              <span class="text-4xl sm:text-5xl font-bold font-bebas text-textPrimary">₹1,799</span>
+              <span class="text-textSecondary text-sm font-light">/ month</span>
+            </div>
+            <ul class="flex flex-col gap-4 text-sm text-textSecondary font-light mb-8">
+              <li class="flex items-center gap-3"><i class="fas fa-check text-xs text-accent"></i> Full Gym Access (Cardio + Strength)</li>
+              <li class="flex items-center gap-3"><i class="fas fa-check text-xs text-accent"></i> Advanced Strength Equipment</li>
+              <li class="flex items-center gap-3"><i class="fas fa-check text-xs text-accent"></i> Standard Trainer Support</li>
+              <li class="flex items-center gap-3"><i class="fas fa-check text-xs text-accent"></i> Locker & Changing Rooms</li>
+              <li class="flex items-center gap-3 text-textMuted"><i class="fas fa-times text-xs text-textMuted"></i> Personal Trainer & Diet Plan</li>
+            </ul>
+          </div>
+          <button onclick="selectPackageRegister('standard-plan')" class="btn-premium w-full text-center font-montserrat font-bold text-xs py-4 px-4 uppercase bg-accent text-accentInverse rounded border border-accent hover:bg-transparent hover:text-accent transition">
+            Join Now
+          </button>
+        </div>
+
+        <!-- Premium Plan -->
+        <div class="gym-card rounded-xl p-8 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="150">
+          <div>
+            <span class="text-xs font-bold text-textSecondary uppercase tracking-widest block mb-2 font-montserrat">Premium Plan</span>
+            <div class="flex items-baseline gap-2 mb-6">
+              <span class="text-4xl sm:text-5xl font-bold font-bebas text-textPrimary">₹2,999</span>
+              <span class="text-textSecondary text-sm font-light">/ month</span>
+            </div>
+            <ul class="flex flex-col gap-4 text-sm text-textSecondary font-light mb-8">
+              <li class="flex items-center gap-3"><i class="fas fa-check text-xs text-accent"></i> Personal Elite Trainer</li>
+              <li class="flex items-center gap-3"><i class="fas fa-check text-xs text-accent"></i> Periodic Diet & Nutrition Consultation</li>
+              <li class="flex items-center gap-3"><i class="fas fa-check text-xs text-accent"></i> Full Gym & Functional Area Access</li>
+              <li class="flex items-center gap-3"><i class="fas fa-check text-xs text-accent"></i> Priority VIP Locker & Towel service</li>
+              <li class="flex items-center gap-3"><i class="fas fa-check text-xs text-accent"></i> 24/7 Priority Support Desk</li>
+            </ul>
+          </div>
+          <button onclick="selectPackageRegister('premium-plan')" class="btn-premium w-full text-center font-montserrat font-bold text-xs py-4 px-4 uppercase bg-bgSecondary border border-borderPrimary text-textPrimary rounded hover:text-accentInverse transition">
+            Join Now
+          </button>
+        </div>
+      </div>
+
+      <!-- Compare Plans Table -->
+      <div class="max-w-4xl mx-auto bg-bgSecondary/65 rounded-xl border border-borderPrimary overflow-hidden" data-aos="fade-up">
+        <div class="p-6 bg-bgTertiary/60 border-b border-borderPrimary text-center">
+          <h3 class="text-xl font-bold font-montserrat text-textPrimary tracking-wide uppercase">Plan Feature Comparison</h3>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="border-b border-borderPrimary text-textSecondary font-montserrat font-bold text-xs uppercase bg-bgSecondary/20">
+                <th class="p-4 sm:p-5">Features</th>
+                <th class="p-4 sm:p-5 text-center">Basic (₹999)</th>
+                <th class="p-4 sm:p-5 text-center">Standard (₹1,799)</th>
+                <th class="p-4 sm:p-5 text-center">Premium (₹2,999)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-borderPrimary text-textSecondary font-light">
+              <tr>
+                <td class="p-4 sm:p-5 font-medium text-textPrimary">Gym Floor Access</td>
+                <td class="p-4 sm:p-5 text-center text-xs"><i class="fas fa-check text-accent"></i></td>
+                <td class="p-4 sm:p-5 text-center text-xs"><i class="fas fa-check text-accent"></i></td>
+                <td class="p-4 sm:p-5 text-center text-xs"><i class="fas fa-check text-accent"></i></td>
+              </tr>
+              <tr>
+                <td class="p-4 sm:p-5 font-medium text-textPrimary">Cardio Equipment</td>
+                <td class="p-4 sm:p-5 text-center text-xs"><i class="fas fa-check text-accent"></i></td>
+                <td class="p-4 sm:p-5 text-center text-xs"><i class="fas fa-check text-accent"></i></td>
+                <td class="p-4 sm:p-5 text-center text-xs"><i class="fas fa-check text-accent"></i></td>
+              </tr>
+              <tr>
+                <td class="p-4 sm:p-5 font-medium text-textPrimary">Locker Rooms & Shower</td>
+                <td class="p-4 sm:p-5 text-center text-xs"><i class="fas fa-check text-accent"></i></td>
+                <td class="p-4 sm:p-5 text-center text-xs"><i class="fas fa-check text-accent"></i></td>
+                <td class="p-4 sm:p-5 text-center text-xs"><i class="fas fa-check text-accent"></i></td>
+              </tr>
+              <tr>
+                <td class="p-4 sm:p-5 font-medium text-textPrimary">Strength Training Area</td>
+                <td class="p-4 sm:p-5 text-center text-xs text-textMuted"><i class="fas fa-minus"></i></td>
+                <td class="p-4 sm:p-5 text-center text-xs"><i class="fas fa-check text-accent"></i></td>
+                <td class="p-4 sm:p-5 text-center text-xs"><i class="fas fa-check text-accent"></i></td>
+              </tr>
+              <tr>
+                <td class="p-4 sm:p-5 font-medium text-textPrimary">General Trainer Support</td>
+                <td class="p-4 sm:p-5 text-center text-xs text-textMuted"><i class="fas fa-minus"></i></td>
+                <td class="p-4 sm:p-5 text-center text-xs"><i class="fas fa-check text-accent"></i></td>
+                <td class="p-4 sm:p-5 text-center text-xs"><i class="fas fa-check text-accent"></i></td>
+              </tr>
+              <tr>
+                <td class="p-4 sm:p-5 font-medium text-textPrimary">Personal Trainer Assignment</td>
+                <td class="p-4 sm:p-5 text-center text-xs text-textMuted"><i class="fas fa-minus"></i></td>
+                <td class="p-4 sm:p-5 text-center text-xs text-textMuted"><i class="fas fa-minus"></i></td>
+                <td class="p-4 sm:p-5 text-center text-xs"><i class="fas fa-check text-accent"></i></td>
+              </tr>
+              <tr>
+                <td class="p-4 sm:p-5 font-medium text-textPrimary">Diet & Nutrition Charts</td>
+                <td class="p-4 sm:p-5 text-center text-xs text-textMuted"><i class="fas fa-minus"></i></td>
+                <td class="p-4 sm:p-5 text-center text-xs text-textMuted"><i class="fas fa-minus"></i></td>
+                <td class="p-4 sm:p-5 text-center text-xs"><i class="fas fa-check text-accent"></i></td>
+              </tr>
+              <tr>
+                <td class="p-4 sm:p-5 font-medium text-textPrimary">Priority Locker / Towel Support</td>
+                <td class="p-4 sm:p-5 text-center text-xs text-textMuted"><i class="fas fa-minus"></i></td>
+                <td class="p-4 sm:p-5 text-center text-xs text-textMuted"><i class="fas fa-minus"></i></td>
+                <td class="p-4 sm:p-5 text-center text-xs"><i class="fas fa-check text-accent"></i></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews & Testimonials Section -->
+  <section id="reviews" class="py-24 bg-themeDark/50 backdrop-blur-md border-b border-borderPrimary">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center mb-12">
+        <div class="lg:col-span-1 flex flex-col gap-4 text-left" data-aos="fade-right">
+          <span class="text-accent font-bold uppercase tracking-widest text-xs">TESTIMONIALS</span>
+          <h2 class="text-4xl sm:text-5xl font-bold font-bebas text-textPrimary">WHAT OUR MEMBERS SAY</h2>
+          <div class="w-16 h-1 bg-accent mb-2"></div>
+          
+          <!-- Rating Banner -->
+          <div class="bg-bgSecondary p-6 rounded-lg border border-borderPrimary flex items-center gap-4">
+            <span class="text-4xl font-bold text-textPrimary font-bebas">4.9 / 5</span>
+            <div>
+              <div class="flex text-yellow-500 text-xs mb-1">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <p class="text-xs text-textSecondary font-montserrat">Based on 1,200+ Google Reviews</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carousel navigation controls -->
+        <div class="lg:col-span-2 flex justify-between sm:justify-end gap-3" data-aos="fade-left">
+          <button id="slider-prev" class="w-12 h-12 flex justify-center items-center border border-borderPrimary text-textPrimary rounded-full hover:bg-accent hover:text-accentInverse transition" aria-label="Previous slide">
+            <i class="fas fa-chevron-left text-xs"></i>
+          </button>
+          <button id="slider-next" class="w-12 h-12 flex justify-center items-center border border-borderPrimary text-textPrimary rounded-full hover:bg-accent hover:text-accentInverse transition" aria-label="Next slide">
+            <i class="fas fa-chevron-right text-xs"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Testimonial Slider Outer wrapper -->
+      <div class="reviews-container-box overflow-hidden" data-aos="fade-up">
+        <div id="reviews-slider" class="testimonial-wrapper">
+          <!-- Rendered dynamically by javascript -->
+        </div>
+      </div>
+      
+      <!-- Dots controls -->
+      <div id="slider-dots" class="slider-dots flex justify-center gap-2 mt-8">
+        <!-- Rendered dynamically by javascript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo Gallery -->
+  <section class="py-24 bg-themeDark/30 border-b border-borderPrimary">
+    <div class="container mx-auto px-6">
+      <div class="max-w-2xl mx-auto mb-16 text-center flex flex-col gap-4">
+        <span class="text-accent font-bold uppercase tracking-widest text-xs">VISUAL EXPERIENCE</span>
+        <h2 class="text-4xl sm:text-5xl font-bold font-bebas text-textPrimary">D V FITNESS GALLERY</h2>
+        <div class="w-16 h-1 bg-accent mx-auto"></div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Gallery 1 -->
+        <div class="gallery-item group relative h-64 rounded-lg overflow-hidden cursor-pointer border border-white/5" data-aos="zoom-in">
+          <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&q=80&w=600" alt="Cardio Floor" class="w-full h-full object-cover opacity-75 group-hover:scale-105 transition duration-500">
+          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition duration-300 flex items-end p-6">
+            <h4 class="text-lg font-bold font-montserrat text-white tracking-wide uppercase">Cardio Zone</h4>
+          </div>
+        </div>
+        <!-- Gallery 2 -->
+        <div class="gallery-item group relative h-64 rounded-lg overflow-hidden cursor-pointer border border-white/5" data-aos="zoom-in" data-aos-delay="100">
+          <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&q=80&w=600" alt="Strength Section" class="w-full h-full object-cover opacity-75 group-hover:scale-105 transition duration-500">
+          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition duration-300 flex items-end p-6">
+            <h4 class="text-lg font-bold font-montserrat text-white tracking-wide uppercase">Strength Training Zone</h4>
+          </div>
+        </div>
+        <!-- Gallery 3 -->
+        <div class="gallery-item group relative h-64 rounded-lg overflow-hidden cursor-pointer border border-white/5" data-aos="zoom-in" data-aos-delay="200">
+          <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&q=80&w=600" alt="Functional Crossfit Area" class="w-full h-full object-cover opacity-75 group-hover:scale-105 transition duration-500">
+          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition duration-300 flex items-end p-6">
+            <h4 class="text-lg font-bold font-montserrat text-white tracking-wide uppercase">Functional Arena</h4>
+          </div>
+        </div>
+        <!-- Gallery 4 -->
+        <div class="gallery-item group relative h-64 rounded-lg overflow-hidden cursor-pointer border border-white/5" data-aos="zoom-in">
+          <img src="./assets/images/about-gym.jpg" alt="Free Weights Area" class="w-full h-full object-cover opacity-75 group-hover:scale-105 transition duration-500">
+          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition duration-300 flex items-end p-6">
+            <h4 class="text-lg font-bold font-montserrat text-white tracking-wide uppercase">Free Weights Platform</h4>
+          </div>
+        </div>
+        <!-- Gallery 5 -->
+        <div class="gallery-item group relative h-64 rounded-lg overflow-hidden cursor-pointer border border-white/5" data-aos="zoom-in" data-aos-delay="100">
+          <img src="https://images.unsplash.com/photo-1594882645126-14020914d58d?auto=format&fit=crop&q=80&w=600" alt="Spinning Room" class="w-full h-full object-cover opacity-75 group-hover:scale-105 transition duration-500">
+          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition duration-300 flex items-end p-6">
+            <h4 class="text-lg font-bold font-montserrat text-white tracking-wide uppercase">Spinning Cycling Studio</h4>
+          </div>
+        </div>
+        <!-- Gallery 6 -->
+        <div class="gallery-item group relative h-64 rounded-lg overflow-hidden cursor-pointer border border-white/5" data-aos="zoom-in" data-aos-delay="200">
+          <img src="https://images.unsplash.com/photo-1578762560072-46cf12e02209?auto=format&fit=crop&q=80&w=600" alt="Locker Room" class="w-full h-full object-cover opacity-75 group-hover:scale-105 transition duration-500">
+          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition duration-300 flex items-end p-6">
+            <h4 class="text-lg font-bold font-montserrat text-white tracking-wide uppercase">Locker & Changing Suites</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal container -->
+  <div id="lightbox" class="lightbox">
+    <button id="lightbox-close" class="absolute top-6 right-6 text-white text-3xl hover:text-neutral-400" aria-label="Close image preview">
+      <i class="fas fa-times"></i>
+    </button>
+    <img id="lightbox-img" src="" alt="Zoomed view" class="lightbox-img">
+  </div>
+
+  <!-- AI Posture Checker Section -->
+  <section id="posture-lab" class="py-24 bg-themeDark/30 border-b border-borderPrimary">
+    <div class="container mx-auto px-6 max-w-5xl">
+      <div class="max-w-2xl mx-auto mb-16 text-center flex flex-col gap-4">
+        <span class="text-accent font-bold uppercase tracking-widest text-xs">SMART COACHING</span>
+        <h2 class="text-4xl sm:text-5xl font-bold font-bebas text-textPrimary">AI POSTURE CHECKER</h2>
+        <div class="w-16 h-1 bg-accent mx-auto"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <!-- Left: Upload & Preview Area (7 cols) -->
+        <div class="lg:col-span-7 flex flex-col gap-6" data-aos="fade-right">
+          <div class="bg-bgSecondary p-6 rounded-2xl border border-borderPrimary shadow-lg">
+            <h3 class="text-xl font-bold font-montserrat text-textPrimary mb-4 flex items-center gap-2">
+              <i class="fas fa-camera text-accent text-base"></i> Posture Lab Upload
+            </h3>
+
+            <!-- Dropzone -->
+            <div id="posture-dropzone" class="border-2 border-dashed border-borderPrimary rounded-xl p-8 text-center cursor-pointer transition duration-300 hover:border-accent flex flex-col items-center justify-center min-h-[220px] bg-bgPrimary/20">
+              <input type="file" id="posture-file-input" class="hidden" accept="image/*,video/*">
+              <i class="fas fa-cloud-upload-alt text-4xl text-textSecondary mb-4"></i>
+              <p class="text-sm font-semibold text-textPrimary">Drag & drop your photo/video here</p>
+              <p class="text-xs text-textSecondary mt-2">Supports JPEG, PNG, MP4 (Max 15MB)</p>
+              <button class="water-log-btn mt-4 text-[11px] px-4 py-2 border border-accent text-accent bg-transparent hover:bg-accent/10 transition">Select File</button>
+            </div>
+
+            <!-- Preview Wrapper (hidden by default) -->
+            <div id="posture-preview-wrapper" class="hidden flex-col gap-4 mt-6">
+              <div class="scanner-container bg-black rounded-xl border border-borderPrimary w-full max-h-[350px] overflow-hidden flex justify-center items-center relative">
+                <!-- Laser Scanner Animation Overlay -->
+                <div id="scanner-laser" class="scanner-line"></div>
+                <!-- Media Elements -->
+                <img id="posture-img-preview" class="w-full h-full object-contain max-h-[350px]" src="" alt="Preview">
+                <video id="posture-video-preview" class="w-full h-full object-contain max-h-[350px] hidden" loop muted playsinline></video>
+                <!-- Canvas Overlay for Skeleton -->
+                <canvas id="posture-canvas" class="skeleton-canvas"></canvas>
+              </div>
+
+              <!-- Exercise Selection and Scan button -->
+              <div class="flex flex-col sm:flex-row gap-4 justify-between items-center bg-bgPrimary/30 p-4 rounded-lg border border-borderPrimary font-montserrat">
+                <div class="flex-1 w-full">
+                  <label for="posture-exercise" class="block text-[10px] font-bold text-textSecondary uppercase tracking-widest mb-1.5 font-montserrat">Target Exercise</label>
+                  <select id="posture-exercise" class="form-input w-full rounded px-3 py-2 text-xs bg-bgPrimary">
+                    <option value="squat">Squat Form Test</option>
+                    <option value="pushup">Push-Up Form Test</option>
+                    <option value="deadlift">Deadlift Form Test</option>
+                    <option value="bicep-curl">Bicep Curl Form Test</option>
+                  </select>
+                </div>
+                <button id="posture-scan-btn" class="btn-premium flex-1 w-full text-center font-montserrat font-bold text-xs py-3 px-6 uppercase bg-accent text-accentInverse rounded border border-accent hover:bg-transparent hover:text-accent transition duration-300 sm:mt-4">
+                  Analyze Posture <i class="fas fa-magic ml-1.5"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Results Panel (5 cols) -->
+        <div class="lg:col-span-5 flex flex-col gap-6" data-aos="fade-left">
+          <div class="bg-bgSecondary p-6 sm:p-8 rounded-2xl border border-borderPrimary shadow-lg min-h-[380px] flex flex-col justify-between">
+            <div id="posture-results-placeholder" class="flex flex-col justify-center items-center text-center py-16 gap-4">
+              <i class="fas fa-stethoscope text-5xl text-accent/20"></i>
+              <h4 class="text-lg font-bold font-montserrat text-textPrimary">Diagnostics Ready</h4>
+              <p class="text-xs text-textSecondary font-light max-w-[240px]">Upload a file and click "Analyze Posture" to view joint angles and pose feedback.</p>
+            </div>
+
+            <!-- Analysis results (hidden by default) -->
+            <div id="posture-results-card" class="hidden flex-col gap-6">
+              <div class="flex justify-between items-center border-b border-borderPrimary pb-4">
+                <span class="text-xs font-bold text-textSecondary uppercase tracking-widest font-montserrat">AI Diagnostics</span>
+                <span id="posture-badge" class="bg-green-500/10 text-green-500 border border-green-500/20 text-[10px] font-bold py-1 px-3.5 rounded-full uppercase">Good Form</span>
+              </div>
+
+              <!-- Score Circular Indicator Mock -->
+              <div class="flex items-center gap-6">
+                <div class="relative w-20 h-20 flex justify-center items-center rounded-full border-4 border-accent bg-bgPrimary">
+                  <span id="posture-score" class="text-2xl font-bold font-bebas text-textPrimary">92%</span>
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold font-montserrat text-textPrimary">Overall Posture Score</h4>
+                  <p class="text-xs text-textSecondary mt-1 leading-relaxed" id="posture-summary">Awesome form alignment. Keep your ankles anchored.</p>
+                </div>
+              </div>
+
+              <!-- Joint Angles & Alignment list -->
+              <div class="flex flex-col gap-3">
+                <span class="text-[10px] font-bold text-textSecondary uppercase tracking-widest font-montserrat block">Joint Alignment Feed</span>
+                <div class="flex flex-col gap-2.5 text-xs font-montserrat" id="posture-metrics-list">
+                  <!-- JS inserts list here -->
+                </div>
+              </div>
+
+              <!-- Coach recommendation tips -->
+              <div class="bg-bgPrimary/50 p-4 rounded border border-borderPrimary">
+                <span class="text-[10px] font-bold text-accent uppercase tracking-widest block mb-1.5 font-montserrat flex items-center gap-1.5">
+                  <i class="fas fa-graduation-cap"></i> AI Coach Advice
+                </span>
+                <p id="posture-advice-text" class="text-xs text-textSecondary font-light leading-relaxed">Ensure knees track outward over toes. Do not let knees cave in at bottom phase.</p>
+              </div>
+            </div>
+
+            <!-- Upload Reset Button -->
+            <div id="posture-reset-wrapper" class="hidden pt-4 border-t border-borderPrimary/60">
+              <button id="posture-reset-btn" class="water-log-btn w-full py-2 bg-transparent text-textSecondary border border-borderPrimary hover:border-accent hover:text-accent font-montserrat transition text-center uppercase tracking-wider text-[10px] font-bold">
+                Clear Analysis & Upload New
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BMI Calculator Tool Section -->
+  <section class="py-24 bg-themeDark/50 backdrop-blur-md border-b border-borderPrimary">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center bg-bgSecondary p-8 sm:p-12 rounded-2xl border border-borderPrimary shadow-xl" data-aos="fade-up">
+        <!-- Left Title & Inputs -->
+        <div>
+          <h2 class="text-4xl font-bold font-bebas text-textPrimary mb-3">BMI CALCULATOR</h2>
+          <p class="text-textSecondary text-sm font-light leading-relaxed mb-8">Calculate your Body Mass Index in real time to understand which training strategy suits your wellness goals.</p>
+          
+          <div class="flex flex-col gap-5">
+            <div>
+              <label for="bmi-height" class="block text-xs font-bold text-textSecondary uppercase tracking-widest mb-2 font-montserrat">Height (cm)</label>
+              <input type="number" id="bmi-height" placeholder="e.g. 175" class="w-full bg-bgPrimary border border-borderPrimary rounded px-4 py-3 text-sm text-textPrimary focus:outline-none focus:border-accent">
+            </div>
+            <div>
+              <label for="bmi-weight" class="block text-xs font-bold text-textSecondary uppercase tracking-widest mb-2 font-montserrat">Weight (kg)</label>
+              <input type="number" id="bmi-weight" placeholder="e.g. 70" class="w-full bg-bgPrimary border border-borderPrimary rounded px-4 py-3 text-sm text-textPrimary focus:outline-none focus:border-accent">
+            </div>
+            <button id="bmi-calc-btn" class="btn-premium w-full text-center font-montserrat font-bold text-xs py-4 px-4 uppercase bg-accent text-accentInverse rounded border border-accent hover:bg-transparent hover:text-accent transition duration-300">
+              Calculate BMI
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Result Panel (hidden by default) -->
+        <div id="bmi-result-box" class="hidden flex-col gap-5 bg-bgTertiary/60 p-6 rounded-xl border border-borderPrimary">
+          <span class="text-textSecondary font-bold uppercase tracking-widest text-[10px] block">YOUR CALCULATION STATUS</span>
+          <div>
+            <span class="text-5xl font-bold font-bebas text-textPrimary" id="bmi-value">22.5</span>
+            <div id="bmi-status" class="text-sm font-montserrat font-bold mt-1 text-green-500">Normal Weight</div>
+          </div>
+          <div class="border-t border-borderPrimary pt-4">
+            <span class="text-[10px] font-bold text-textSecondary uppercase tracking-widest block mb-1">D V Recommendation:</span>
+            <p id="bmi-advice" class="text-xs text-textSecondary font-light leading-relaxed">Recommendation advice text.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion section -->
+  <section class="py-24 bg-themeDark/30 border-b border-borderPrimary">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <div class="max-w-2xl mx-auto mb-16 text-center flex flex-col gap-4">
+        <span class="text-accent font-bold uppercase tracking-widest text-xs">FREQUENT QUESTIONS</span>
+        <h2 class="text-4xl sm:text-5xl font-bold font-bebas text-textPrimary">COMMON FAQS</h2>
+        <div class="w-16 h-1 bg-accent mx-auto"></div>
+      </div>
+
+      <!-- FAQ Container -->
+      <div id="faqs-container" class="bg-bgSecondary p-8 rounded-xl border border-borderPrimary">
+        <!-- Rendered dynamically by javascript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Registration Page Section -->
+  <section id="register" class="py-24 bg-themeDark/50 backdrop-blur-md border-b border-borderPrimary">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <div class="max-w-2xl mx-auto mb-16 text-center flex flex-col gap-4">
+        <span class="text-accent font-bold uppercase tracking-widest text-xs">JOIN THE CLUB</span>
+        <h2 class="text-4xl sm:text-5xl font-bold font-bebas text-textPrimary">MEMBERSHIP REGISTRATION</h2>
+        <div class="w-16 h-1 bg-accent mx-auto"></div>
+      </div>
+
+      <!-- Registration Form -->
+      <form id="register-form" class="bg-bgSecondary p-8 sm:p-12 rounded-2xl border border-borderPrimary shadow-xl" novalidate data-aos="fade-up">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+          <!-- Full Name -->
+          <div>
+            <label for="reg-name" class="block text-xs font-bold text-textSecondary uppercase tracking-widest mb-2 font-montserrat">Full Name *</label>
+            <input type="text" id="reg-name" placeholder="John Doe" required class="form-input w-full rounded px-4 py-3 text-sm">
+            <span class="error-message">Full Name is required</span>
+          </div>
+
+          <!-- Age -->
+          <div>
+            <label for="reg-age" class="block text-xs font-bold text-textSecondary uppercase tracking-widest mb-2 font-montserrat">Age *</label>
+            <input type="number" id="reg-age" placeholder="Min 14" required class="form-input w-full rounded px-4 py-3 text-sm">
+            <span class="error-message">Age is required (Must be 14-100)</span>
+          </div>
+
+          <!-- Gender -->
+          <div>
+            <label for="reg-gender" class="block text-xs font-bold text-textSecondary uppercase tracking-widest mb-2 font-montserrat">Gender *</label>
+            <select id="reg-gender" required class="form-input w-full rounded px-4 py-3 text-sm bg-bgPrimary">
+              <option value="" disabled selected>Select Gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+            </select>
+            <span class="error-message">Please select gender</span>
+          </div>
+
+          <!-- Phone -->
+          <div>
+            <label for="reg-phone" class="block text-xs font-bold text-textSecondary uppercase tracking-widest mb-2 font-montserrat">Phone Number *</label>
+            <input type="tel" id="reg-phone" placeholder="e.g. 9876543210" required class="form-input w-full rounded px-4 py-3 text-sm">
+            <span class="error-message">Valid 10-digit mobile number required</span>
+          </div>
+
+          <!-- Email -->
+          <div>
+            <label for="reg-email" class="block text-xs font-bold text-textSecondary uppercase tracking-widest mb-2 font-montserrat">Email Address *</label>
+            <input type="email" id="reg-email" placeholder="john@example.com" required class="form-input w-full rounded px-4 py-3 text-sm">
+            <span class="error-message">Valid email address required</span>
+          </div>
+
+          <!-- Fitness Goal -->
+          <div>
+            <label for="reg-goal" class="block text-xs font-bold text-textSecondary uppercase tracking-widest mb-2 font-montserrat">Fitness Goal *</label>
+            <select id="reg-goal" required class="form-input w-full rounded px-4 py-3 text-sm bg-bgPrimary">
+              <option value="" disabled selected>Select Primary Goal</option>
+              <option value="Weight Loss">Weight Loss / Fat Loss</option>
+              <option value="Muscle Building">Muscle Building / Strength</option>
+              <option value="Endurance">General Cardio / Endurance</option>
+              <option value="Flexibility">Flexibility / Agility</option>
+            </select>
+            <span class="error-message">Primary Goal is required</span>
+          </div>
+
+          <!-- Preferred Package -->
+          <div>
+            <label for="reg-package" class="block text-xs font-bold text-textSecondary uppercase tracking-widest mb-2 font-montserrat">Preferred Package *</label>
+            <select id="reg-package" required class="form-input w-full rounded px-4 py-3 text-sm bg-bgPrimary">
+              <option value="" disabled selected>Select Membership Plan</option>
+              <option value="basic-plan">Basic Plan (₹999/mo)</option>
+              <option value="standard-plan">Standard Plan (₹1,799/mo)</option>
+              <option value="premium-plan">Premium Plan (₹2,999/mo)</option>
+            </select>
+            <span class="error-message">Preferred Package is required</span>
+          </div>
+
+          <!-- Preferred Workout Time -->
+          <div>
+            <label for="reg-time" class="block text-xs font-bold text-textSecondary uppercase tracking-widest mb-2 font-montserrat">Preferred Workout Time *</label>
+            <select id="reg-time" required class="form-input w-full rounded px-4 py-3 text-sm bg-bgPrimary">
+              <option value="" disabled selected>Select Slot</option>
+              <option value="Morning (5 AM - 9 AM)">Morning (5:00 AM - 9:00 AM)</option>
+              <option value="Mid-day (9 AM - 4 PM)">Mid-day (9:00 AM - 4:00 PM)</option>
+              <option value="Evening (4 PM - 8 PM)">Evening (4:00 PM - 8:00 PM)</option>
+              <option value="Night (8 PM - 10 PM)">Night (8:00 PM - 10:00 PM)</option>
+            </select>
+            <span class="error-message">Workout Time Slot is required</span>
+          </div>
+
+          <!-- Address -->
+          <div class="sm:col-span-2">
+            <label for="reg-address" class="block text-xs font-bold text-textSecondary uppercase tracking-widest mb-2 font-montserrat">Residential Address *</label>
+            <textarea id="reg-address" rows="3" placeholder="Enter full address details" required class="form-input w-full rounded px-4 py-3 text-sm resize-none"></textarea>
+            <span class="error-message">Residential Address is required</span>
+          </div>
+
+          <!-- Medical Conditions -->
+          <div class="sm:col-span-2">
+            <label for="reg-medical" class="block text-xs font-bold text-textSecondary uppercase tracking-widest mb-2 font-montserrat">Medical Conditions (Optional)</label>
+            <textarea id="reg-medical" rows="2" placeholder="Asthma, slip disc, high blood pressure, etc. (Or type None)" class="form-input w-full rounded px-4 py-3 text-sm resize-none"></textarea>
+          </div>
+
+          <!-- Emergency Contact -->
+          <div class="sm:col-span-2">
+            <label for="reg-emergency" class="block text-xs font-bold text-textSecondary uppercase tracking-widest mb-2 font-montserrat">Emergency Contact Name & Phone *</label>
+            <input type="text" id="reg-emergency" placeholder="Name - Relationship - Phone number" required class="form-input w-full rounded px-4 py-3 text-sm">
+            <span class="error-message">Emergency Contact details are required</span>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-premium w-full text-center font-montserrat font-bold text-sm py-4 px-4 uppercase bg-accent text-accentInverse rounded border border-accent hover:bg-transparent hover:text-accent transition duration-300">
+          Submit Registration <i class="fas fa-check-circle ml-2"></i>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Success Modal for Registration -->
+  <div id="success-modal" class="fixed inset-0 bg-black/90 z-[999] hidden justify-center items-center p-6 backdrop-blur-sm">
+    <div class="bg-bgPrimary border border-borderPrimary p-8 sm:p-12 rounded-2xl max-w-md w-full text-center relative" data-aos="zoom-in" data-aos-duration="300">
+      <div class="w-16 h-16 bg-accent/10 border border-accent/30 text-accent rounded-full flex justify-center items-center text-3xl mx-auto mb-6">
+        <i class="fas fa-check-double"></i>
+      </div>
+      <h3 class="text-3xl font-bold font-bebas text-textPrimary mb-2">REGISTRATION SUCCESSFUL!</h3>
+      <p class="text-textSecondary text-sm font-light leading-relaxed mb-6">
+        Welcome to the team, <span id="success-user-name" class="font-semibold text-textPrimary">User</span>! You have successfully pre-registered for the <span id="success-user-plan" class="font-semibold text-textPrimary">Plan</span>.
+      </p>
+      <div class="bg-bgSecondary/60 p-4 rounded border border-borderPrimary text-left mb-6 text-xs text-textSecondary leading-relaxed">
+        <span class="font-bold text-textPrimary block mb-1">What happens next?</span>
+        We have saved your details locally. Please visit our front office at D V Fitness with a government ID to complete your physical verification and receive your membership RFID card!
+      </div>
+      <button onclick="closeSuccessModal()" class="btn-premium w-full text-center font-montserrat font-bold text-xs py-3.5 px-4 uppercase bg-accent text-accentInverse rounded border border-accent hover:bg-transparent hover:text-accent transition">
+        Got it, thanks!
+      </button>
+    </div>
+  </div>
+
+  <!-- Contact Us Section -->
+  <section id="contact" class="py-24 bg-themeDark/30 border-b border-borderPrimary">
+    <div class="container mx-auto px-6">
+      <div class="max-w-2xl mx-auto mb-16 text-center flex flex-col gap-4">
+        <span class="text-accent font-bold uppercase tracking-widest text-xs">FIND US</span>
+        <h2 class="text-4xl sm:text-5xl font-bold font-bebas text-textPrimary">CONTACT INFORMATION</h2>
+        <div class="w-16 h-1 bg-accent mx-auto"></div>
+      </div>
+
+      <!-- Contact grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-16">
+        <!-- Contact Details and hours -->
+        <div class="flex flex-col gap-8 text-left" data-aos="fade-right">
+          <div>
+            <h3 class="text-2xl font-bold font-montserrat tracking-tight mb-4 text-textPrimary">D V Fitness Headquarters</h3>
+            <p class="text-textSecondary text-sm font-light leading-relaxed max-w-md">Drop by our center or get in touch through any of our support channels below. Our front desk is always ready to assist.</p>
+          </div>
+
+          <div class="flex flex-col gap-4 text-sm text-textSecondary">
+            <div class="flex items-start gap-4">
+              <i class="fas fa-map-marker-alt text-accent mt-1 w-5 text-center text-base"></i>
+              <p class="font-light">Prime Fitness Avenue, Sector 4, City Center, Landmark: Near Apex Mall</p>
+            </div>
+            <div class="flex items-center gap-4">
+              <i class="fas fa-phone-alt text-accent w-5 text-center text-base"></i>
+              <a href="tel:+919876543210" class="hover:underline font-light">+91 98765 43210</a>
+            </div>
+            <div class="flex items-center gap-4">
+              <i class="fab fa-whatsapp text-accent w-5 text-center text-base"></i>
+              <a href="https://wa.me/919876543210" target="_blank" rel="noopener" class="hover:underline font-light">+91 98765 43210 (WhatsApp)</a>
+            </div>
+            <div class="flex items-center gap-4">
+              <i class="fas fa-envelope text-accent w-5 text-center text-base"></i>
+              <a href="mailto:support@dvfitness.com" class="hover:underline font-light">support@dvfitness.com</a>
+            </div>
+          </div>
+
+          <!-- Working Hours -->
+          <div class="bg-bgSecondary p-6 rounded-xl border border-borderPrimary">
+            <h4 class="font-bold font-montserrat text-sm tracking-wide text-textPrimary uppercase mb-4">Working Hours</h4>
+            <div class="flex flex-col gap-2.5 text-xs text-textSecondary">
+              <div class="flex justify-between border-b border-borderPrimary pb-2">
+                <span>Monday–Saturday</span>
+                <span class="font-semibold text-textPrimary">5:00 AM – 10:00 PM</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Sunday</span>
+                <span class="font-semibold text-textPrimary">6:00 AM – 2:00 PM</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social media handles -->
+          <div>
+            <h4 class="text-xs font-bold text-accent uppercase tracking-widest mb-4 font-montserrat">CONNECT WITH US</h4>
+            <div class="flex gap-4">
+              <a href="https://instagram.com" target="_blank" rel="noopener" class="w-10 h-10 border border-borderPrimary rounded-full flex justify-center items-center text-textPrimary hover:bg-accent hover:text-accentInverse hover:border-accent transition" aria-label="Visit Instagram page">
+                <i class="fab fa-instagram text-sm"></i>
+              </a>
+              <a href="https://facebook.com" target="_blank" rel="noopener" class="w-10 h-10 border border-borderPrimary rounded-full flex justify-center items-center text-textPrimary hover:bg-accent hover:text-accentInverse hover:border-accent transition" aria-label="Visit Facebook page">
+                <i class="fab fa-facebook-f text-sm"></i>
+              </a>
+              <a href="https://youtube.com" target="_blank" rel="noopener" class="w-10 h-10 border border-borderPrimary rounded-full flex justify-center items-center text-textPrimary hover:bg-accent hover:text-accentInverse hover:border-accent transition" aria-label="Visit YouTube channel">
+                <i class="fab fa-youtube text-sm"></i>
+              </a>
+              <a href="https://wa.me/919876543210" target="_blank" rel="noopener" class="w-10 h-10 border border-borderPrimary rounded-full flex justify-center items-center text-textPrimary hover:bg-accent hover:text-accentInverse hover:border-accent transition" aria-label="Message on WhatsApp">
+                <i class="fab fa-whatsapp text-sm"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Message Form -->
+        <div data-aos="fade-left">
+          <form id="contact-form" class="bg-bgSecondary p-8 sm:p-10 rounded-2xl border border-borderPrimary flex flex-col gap-5">
+            <h3 class="text-2xl font-bold font-montserrat text-textPrimary tracking-tight mb-2">Leave A Message</h3>
+            <div>
+              <label for="con-name" class="block text-[10px] font-bold text-textSecondary uppercase tracking-widest mb-2 font-montserrat">Your Name</label>
+              <input type="text" id="con-name" required placeholder="John Doe" class="form-input w-full rounded px-4 py-3 text-sm">
+            </div>
+            <div>
+              <label for="con-email" class="block text-[10px] font-bold text-textSecondary uppercase tracking-widest mb-2 font-montserrat">Email Address</label>
+              <input type="email" id="con-email" required placeholder="john@example.com" class="form-input w-full rounded px-4 py-3 text-sm">
+            </div>
+            <div>
+              <label for="con-phone" class="block text-[10px] font-bold text-textSecondary uppercase tracking-widest mb-2 font-montserrat">Phone (Optional)</label>
+              <input type="tel" id="con-phone" placeholder="e.g. 9876543210" class="form-input w-full rounded px-4 py-3 text-sm">
+            </div>
+            <div>
+              <label for="con-message" class="block text-[10px] font-bold text-textSecondary uppercase tracking-widest mb-2 font-montserrat">Message</label>
+              <textarea id="con-message" required rows="4" placeholder="How can we help you?" class="form-input w-full rounded px-4 py-3 text-sm resize-none"></textarea>
+            </div>
+            <button type="submit" class="btn-premium w-full text-center font-montserrat font-bold text-xs py-4 px-4 uppercase bg-accent text-accentInverse rounded border border-accent hover:bg-transparent hover:text-accent transition duration-300">
+              Send Message <i class="fas fa-paper-plane ml-1.5"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Google Map Section Mockup -->
+      <div class="w-full h-80 rounded-xl overflow-hidden border border-borderPrimary relative shadow-inner" data-aos="zoom-in">
+        <!-- We use a custom styled dark map graphic or embed a placeholder that looks highly realistic -->
+        <div class="absolute inset-0 bg-bgSecondary/90 flex flex-col justify-center items-center text-center p-6 gap-4 z-10">
+          <div class="w-12 h-12 rounded-full border border-accent/30 bg-accent/10 flex justify-center items-center text-accent text-lg">
+            <i class="fas fa-map-marked-alt"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-textPrimary font-montserrat text-base">DV Fitness - Prime Location Map</h4>
+            <p class="text-textSecondary text-xs font-light max-w-sm mt-1">Sector 4, City Center, Near Apex Mall, Cityville</p>
+          </div>
+          <!-- Clickable Link to Real Map -->
+          <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn-premium-outline font-montserrat font-bold text-xs py-2 px-6 uppercase rounded transition duration-300">
+            Open in Google Maps
+          </a>
+        </div>
+        <div class="absolute inset-0 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px] opacity-10"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="bg-bgPrimary py-16 border-t border-borderPrimary text-textSecondary text-sm">
+    <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+      <!-- About/Logo -->
+      <div class="flex flex-col gap-4">
+        <a href="#home" class="flex items-center gap-2 text-2xl font-bold text-textPrimary tracking-widest font-bebas">
+          <i class="fas fa-dumbbell text-accent text-xl"></i>
+          <span>D V <span class="text-stroke text-textPrimary">FITNESS</span></span>
+        </a>
+        <p class="font-light text-xs leading-relaxed text-textMuted max-w-xs">Elevate your conditioning at our state of the art gym center. Powered by elite training coaches and heavy duty machines.</p>
+        <span class="text-xs text-textMuted font-montserrat">© 2026 D V Fitness. All Rights Reserved.</span>
+      </div>
+
+      <!-- Quick links -->
+      <div class="flex flex-col gap-4 text-left">
+        <h4 class="text-xs font-bold text-accent uppercase tracking-widest font-montserrat">QUICK LINKS</h4>
+        <div class="flex flex-col gap-2.5 text-xs font-light text-textMuted">
+          <a href="#home" class="hover:text-textPrimary transition">Home</a>
+          <a href="#about" class="hover:text-textPrimary transition">About Us</a>
+          <a href="#equipment" class="hover:text-textPrimary transition">Gym Equipment</a>
+          <a href="#packages" class="hover:text-textPrimary transition">Membership Packages</a>
+          <a href="#reviews" class="hover:text-textPrimary transition">Testimonials</a>
+          <a href="#register" class="hover:text-textPrimary transition">Pre-Register</a>
+        </div>
+      </div>
+
+      <!-- Contact Quick Info -->
+      <div class="flex flex-col gap-4 text-left">
+        <h4 class="text-xs font-bold text-accent uppercase tracking-widest font-montserrat">GET IN TOUCH</h4>
+        <div class="flex flex-col gap-3 text-xs font-light text-textMuted">
+          <p><i class="fas fa-map-marker-alt text-accent mr-2"></i> Sector 4, City Center, Cityville</p>
+          <p><i class="fas fa-phone-alt text-accent mr-2"></i> +91 98765 43210</p>
+          <p><i class="fas fa-envelope text-accent mr-2"></i> support@dvfitness.com</p>
+        </div>
+      </div>
+
+      <!-- Newsletter subscription form -->
+      <div class="flex flex-col gap-4 text-left">
+        <h4 class="text-xs font-bold text-accent uppercase tracking-widest font-semibold">NEWSLETTER</h4>
+        <p class="text-xs font-light text-textMuted leading-relaxed mb-1">Subscribe to receive exclusive workout tips, diet blueprints, and promotional membership discounts.</p>
+        <form id="newsletter-form" class="flex gap-2">
+          <input type="email" placeholder="Your email Address" required class="form-input text-xs px-3.5 py-3 rounded flex-1">
+          <button type="submit" class="bg-accent text-accentInverse font-montserrat font-bold text-xs py-3 px-4 rounded hover:bg-accent/80 transition" aria-label="Subscribe to newsletter">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- T&C links -->
+    <div class="container mx-auto px-6 border-t border-borderPrimary/60 pt-8 flex flex-col sm:flex-row justify-between gap-4 text-xs font-light text-textMuted">
+      <div class="flex gap-4">
+        <a href="#privacy" class="hover:underline">Privacy Policy</a>
+        <span>|</span>
+        <a href="#terms" class="hover:underline">Terms & Conditions</a>
+      </div>
+      <p class="font-montserrat">Designed with premium aesthetics for fitness elites.</p>
+    </div>
+  </footer>
+
+  <!-- Floating chat Widget placeholder -->
+  <div id="chat-widget" class="flex items-end">
+    <!-- Chat window panel -->
+    <div id="chat-window" class="chat-window !h-[480px]">
+      <div class="chat-header">
+        <div class="flex items-center gap-2">
+          <i class="fas fa-dumbbell text-xs animate-bounce text-accentInverse"></i>
+          <span>Virtual Gym Buddy</span>
+        </div>
+        <button id="chat-close" class="text-accentInverse/60 hover:text-accentInverse" aria-label="Close Chat">
+          <i class="fas fa-times text-sm"></i>
+        </button>
+      </div>
+
+      <!-- Hydration Tracker Panel -->
+      <div class="hydration-panel">
+        <div class="flex justify-between items-center text-[10px] font-bold text-textPrimary mb-1.5">
+          <span class="flex items-center gap-1 text-blue-400"><i class="fas fa-tint"></i> Hydration Tracker</span>
+          <span id="water-progress-text" class="text-blue-400">0 / 3000 ml</span>
+        </div>
+        <div class="water-progress-bg mb-2">
+          <div id="water-progress-fill" class="water-progress-fill"></div>
+        </div>
+        <div class="flex gap-2 justify-between">
+          <button onclick="logWater(250)" class="water-log-btn flex-1 text-center font-bold font-montserrat uppercase">+250ml 💧</button>
+          <button onclick="logWater(500)" class="water-log-btn flex-1 text-center font-bold font-montserrat uppercase">+500ml 🥤</button>
+          <button onclick="resetWater()" class="text-[9px] text-textMuted hover:text-accent transition flex items-center justify-center px-2 bg-transparent border-0 outline-none"><i class="fas fa-sync-alt"></i></button>
+        </div>
+      </div>
+
+      <!-- Chat Messages -->
+      <div id="chat-messages" class="chat-messages font-light">
+        <div class="chat-msg bot">
+          Hey gym buddy! 🏋️ I am your Virtual Fitness companion. I can keep you motivated, log your daily water intake, and answer fitness queries!
+        </div>
+      </div>
+
+      <!-- Suggestion chips -->
+      <div class="chat-chips-container">
+        <div class="chat-chip" onclick="triggerQuickReply('Motivate Me 🔥')">Motivate Me 🔥</div>
+        <div class="chat-chip" onclick="triggerQuickReply('Fat Loss Tips 🏋️')">Fat Loss Tips 🏋️</div>
+        <div class="chat-chip" onclick="triggerQuickReply('Build Muscle 💪')">Build Muscle 💪</div>
+        <div class="chat-chip" onclick="triggerQuickReply('Gym Hours 🕒')">Gym Hours 🕒</div>
+      </div>
+
+      <div class="chat-input-wrapper">
+        <input type="text" id="chat-input" placeholder="Ask fitness questions...">
+        <button id="chat-send" aria-label="Send message"><i class="fas fa-paper-plane"></i></button>
+      </div>
+    </div>
+    <!-- Chat trigger button -->
+    <button id="chat-trigger" class="chat-trigger" aria-label="Open Chat Help">
+      <i class="far fa-comment-dots text-lg"></i>
+    </button>
+  </div>
+
+  <!-- Back to top button -->
+  <button id="back-to-top" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- AOS (Animate On Scroll) JS Library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  <!-- Core Interaction script -->
+  <script src="./app.js"></script>
+  <script>
+    // Initialize AOS scroll transitions
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: 'ease-out-cubic'
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D V Fitness - Documentation</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            themeDark: 'var(--bg-primary)',
+            themeCard: 'var(--bg-tertiary)',
+            themeTextSecondary: 'var(--text-secondary)',
+            accent: 'var(--accent)',
+            accentInverse: 'var(--accent-inverse)',
+            accentGray: 'var(--accent-gray)',
+            borderPrimary: 'var(--border-color)',
+            textPrimary: 'var(--text-primary)',
+            textSecondary: 'var(--text-secondary)',
+            bgPrimary: 'var(--bg-primary)',
+            bgSecondary: 'var(--bg-secondary)',
+            bgTertiary: 'var(--bg-tertiary)'
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="antialiased">
+
+  <!-- Preloader Screen -->
+  <div id="loader">
+    <div class="flex flex-col items-center gap-4">
+      <div class="spinner"></div>
+      <span class="font-bebas text-3xl tracking-widest text-white animate-pulse">D V FITNESS</span>
+    </div>
+  </div>
+
+  <!-- Header & Sticky Navigation -->
+  <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center transition-colors duration-300">
+      <!-- Logo -->
+      <a href="index.html#home" class="flex items-center gap-2 text-2xl font-bold text-textPrimary tracking-widest font-bebas">
+        <i class="fas fa-dumbbell text-accent text-xl"></i>
+        <span>D V <span class="text-stroke text-textPrimary">FITNESS</span></span>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <div class="hidden lg:flex items-center gap-8 font-montserrat text-sm font-medium text-textPrimary">
+        <a href="index.html#home" class="hover:text-accent transition duration-200">Home</a>
+        <a href="index.html#about" class="hover:text-accent transition duration-200">About</a>
+        <a href="index.html#equipment" class="hover:text-accent transition duration-200">Equipment</a>
+        <a href="index.html#packages" class="hover:text-accent transition duration-200">Packages</a>
+        <a href="index.html#reviews" class="hover:text-accent transition duration-200">Reviews</a>
+        <a href="index.html#register" class="hover:text-accent transition duration-200">Register</a>
+        <a href="index.html#contact" class="hover:text-accent transition duration-200">Contact</a>
+        <a href="documentation.html" class="text-accent border-b-2 border-accent pb-1 transition duration-200">Documentation</a>
+      </div>
+
+      <!-- Right Nav Control Buttons -->
+      <div class="hidden lg:flex items-center gap-4">
+        <!-- Theme Toggle Button -->
+        <button id="theme-toggle" class="w-10 h-10 rounded-full border border-borderPrimary flex justify-center items-center text-textPrimary hover:bg-accent hover:text-accentInverse transition" aria-label="Toggle Light/Dark Theme">
+          <i class="fas fa-sun text-sm light-icon hidden"></i>
+          <i class="fas fa-moon text-sm dark-icon"></i>
+        </button>
+        <a href="index.html#register" class="btn-premium border border-accent bg-accent text-accentInverse font-montserrat font-bold text-xs py-3 px-6 uppercase rounded hover:bg-transparent hover:text-accent transition duration-300">
+          Join Now
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <div class="lg:hidden flex items-center gap-4">
+        <button id="theme-toggle-mobile" class="w-9 h-9 rounded-full border border-borderPrimary flex justify-center items-center text-textPrimary" aria-label="Toggle Theme">
+          <i class="fas fa-sun text-xs light-icon hidden"></i>
+          <i class="fas fa-moon text-xs dark-icon"></i>
+        </button>
+        <button id="menu-btn" class="text-textPrimary text-2xl focus:outline-none" aria-label="Open navigation menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Nav Slide Panel -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-bgPrimary/95 backdrop-blur-md border-b border-borderPrimary text-textPrimary flex flex-col font-montserrat font-semibold text-center py-6 gap-5">
+      <a href="index.html#home" class="hover:text-accent transition py-2">Home</a>
+      <a href="index.html#about" class="hover:text-accent transition py-2">About</a>
+      <a href="index.html#equipment" class="hover:text-accent transition py-2">Equipment</a>
+      <a href="index.html#packages" class="hover:text-accent transition py-2">Packages</a>
+      <a href="index.html#reviews" class="hover:text-accent transition py-2">Reviews</a>
+      <a href="index.html#register" class="hover:text-accent transition py-2">Register</a>
+      <a href="index.html#contact" class="hover:text-accent transition py-2">Contact</a>
+      <a href="documentation.html" class="text-accent transition py-2">Documentation</a>
+      <div class="px-6 mt-4">
+        <a href="index.html#register" class="block w-full border border-accent text-textPrimary font-bold text-xs py-3 uppercase rounded hover:bg-accent hover:text-accentInverse transition">
+          Join Now
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Title Banner -->
+  <section class="pt-32 pb-16 bg-themeDark/20 border-b border-borderPrimary relative">
+    <div class="container mx-auto px-6 text-center">
+      <span class="text-accent font-bold uppercase tracking-widest text-xs">DEVELOPER PORTAL</span>
+      <h1 class="text-5xl sm:text-6xl font-bold font-bebas text-textPrimary mt-3">SYSTEM DOCUMENTATION</h1>
+      <div class="w-16 h-1 bg-accent mx-auto mt-4"></div>
+    </div>
+  </section>
+
+  <!-- Main Documentation Content Section -->
+  <section class="py-16 bg-themeDark/50 backdrop-blur-md">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Sidebar Navigation (3 cols) -->
+        <aside class="lg:col-span-3 lg:sticky lg:top-28 bg-bgSecondary p-6 rounded-xl border border-borderPrimary" data-aos="fade-right">
+          <h3 class="text-xs font-bold text-accent uppercase tracking-widest font-montserrat mb-4">Table of Contents</h3>
+          <ul class="flex flex-col gap-3 text-xs font-montserrat font-medium text-textSecondary">
+            <li>
+              <a href="#doc-overview" class="hover:text-accent transition flex items-center gap-2">
+                <i class="fas fa-info-circle text-[10px]"></i> Project Overview
+              </a>
+            </li>
+            <li>
+              <a href="#doc-details" class="hover:text-accent transition flex items-center gap-2">
+                <i class="fas fa-user text-[10px]"></i> My Details
+              </a>
+            </li>
+            <li>
+              <a href="#doc-tech" class="hover:text-accent transition flex items-center gap-2">
+                <i class="fas fa-layer-group text-[10px]"></i> Technology Stack
+              </a>
+            </li>
+            <li>
+              <a href="#doc-challenges" class="hover:text-accent transition flex items-center gap-2">
+                <i class="fas fa-exclamation-triangle text-[10px]"></i> Challenges & Lessons
+              </a>
+            </li>
+            <li>
+              <a href="#doc-links" class="hover:text-accent transition flex items-center gap-2">
+                <i class="fas fa-link text-[10px]"></i> Deployments & Repos
+              </a>
+            </li>
+          </ul>
+        </aside>
+
+        <!-- Document Body (9 cols) -->
+        <main class="lg:col-span-9 flex flex-col gap-12 bg-bgSecondary p-8 sm:p-10 rounded-xl border border-borderPrimary shadow-lg text-left" data-aos="fade-left">
+          
+          <!-- Section 1: Overview -->
+          <div id="doc-overview" class="scroll-mt-28 border-b border-borderPrimary pb-8 flex flex-col gap-4">
+            <h2 class="text-2xl font-bold font-montserrat text-textPrimary tracking-tight">Project Overview</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-xs mt-2">
+              <div class="p-5 bg-bgPrimary border border-borderPrimary rounded">
+                <span class="text-accent font-bold uppercase tracking-wider block mb-2 font-montserrat">Website Category</span>
+                <p class="text-textSecondary font-light leading-relaxed">Health & Fitness Website</p>
+              </div>
+              <div class="p-5 bg-bgPrimary border border-borderPrimary rounded">
+                <span class="text-accent font-bold uppercase tracking-wider block mb-2 font-montserrat">Problem Statement</span>
+                <p class="text-textSecondary font-light leading-relaxed">Many gyms lack modern and responsive websites that provide users with easy access to membership plans, fitness programs, and contact details. DV Fitness offers a professional and user-friendly solution.</p>
+              </div>
+            </div>
+            
+            <div class="mt-4">
+              <h3 class="text-lg font-bold font-montserrat text-textPrimary mb-2">Why This Project?</h3>
+              <p class="text-textSecondary text-sm font-light leading-relaxed">
+                I chose this project to enhance my frontend development skills while building a modern, responsive website for a real-world fitness business.
+              </p>
+            </div>
+
+            <div class="mt-4">
+              <h3 class="text-lg font-bold font-montserrat text-textPrimary mb-2">Project Description</h3>
+              <p class="text-textSecondary text-sm font-light leading-relaxed">
+                DV Fitness is a responsive gym website built using HTML5, CSS3, and JavaScript. It showcases gym services, workout programs, membership plans, trainers, and contact details through a clean and attractive interface. The website is fully responsive and works smoothly on desktops, tablets, and mobile devices. Future enhancements include online membership registration, a BMI calculator, trainer booking, and payment integration.
+              </p>
+            </div>
+          </div>
+
+          <!-- Section 2: Personal Details -->
+          <div id="doc-details" class="scroll-mt-28 border-b border-borderPrimary pb-8 flex flex-col gap-4">
+            <h2 class="text-2xl font-bold font-montserrat text-textPrimary tracking-tight">Developer Details</h2>
+            <div class="overflow-x-auto rounded border border-borderPrimary">
+              <table class="w-full text-left border-collapse text-xs">
+                <thead>
+                  <tr class="border-b border-borderPrimary text-textSecondary font-montserrat font-bold bg-bgPrimary">
+                    <th class="p-4">Field</th>
+                    <th class="p-4">Details</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-borderPrimary text-textSecondary font-light">
+                  <tr>
+                    <td class="p-4 font-semibold text-textPrimary">Name</td>
+                    <td class="p-4">DIVYA S</td>
+                  </tr>
+                  <tr>
+                    <td class="p-4 font-semibold text-textPrimary">USN</td>
+                    <td class="p-4">1SP23CS023</td>
+                  </tr>
+                  <tr>
+                    <td class="p-4 font-semibold text-textPrimary">Branch</td>
+                    <td class="p-4">Computer Science & Engineering (CSE)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Section 3: Technology Stack -->
+          <div id="doc-tech" class="scroll-mt-28 border-b border-borderPrimary pb-8 flex flex-col gap-4">
+            <h2 class="text-2xl font-bold font-montserrat text-textPrimary tracking-tight">Technology Stack</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-xs mt-2">
+              <div class="p-5 bg-bgPrimary border border-borderPrimary rounded">
+                <span class="text-accent font-bold uppercase tracking-wider block mb-3 font-montserrat">Technologies Used</span>
+                <ul class="flex flex-col gap-2 font-light text-textSecondary list-disc pl-5">
+                  <li>HTML5</li>
+                  <li>CSS3</li>
+                  <li>JavaScript</li>
+                </ul>
+              </div>
+              <div class="p-5 bg-bgPrimary border border-borderPrimary rounded">
+                <span class="text-accent font-bold uppercase tracking-wider block mb-3 font-montserrat">External Resources</span>
+                <ul class="flex flex-col gap-2 font-light text-textSecondary list-disc pl-5">
+                  <li>Google Fonts</li>
+                  <li>Font Awesome Icons</li>
+                  <li>Unsplash / Pexels Images</li>
+                  <li>Git & GitHub Version Control</li>
+                  <li>Vercel Cloud Platform</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 4: Challenges Faced & Lessons Learned -->
+          <div id="doc-challenges" class="scroll-mt-28 border-b border-borderPrimary pb-8 flex flex-col gap-4">
+            <h2 class="text-2xl font-bold font-montserrat text-textPrimary tracking-tight">Challenges & Lessons</h2>
+            
+            <div>
+              <h3 class="text-base font-bold font-montserrat text-textPrimary mb-3">Challenges Faced</h3>
+              <ul class="flex flex-col gap-2 text-xs text-textSecondary font-light list-disc pl-5">
+                <li>Created a responsive layout adaptive to different device viewport bounds.</li>
+                <li>Optimized images for improved web loading speed and layout stability.</li>
+                <li>Added smooth interactive scrolling animations, transitions, and slide navigation menus.</li>
+                <li>Ensured visual and functional compatibility across multiple browsers.</li>
+              </ul>
+            </div>
+
+            <div class="mt-4 bg-bgPrimary/50 p-5 rounded border border-borderPrimary">
+              <span class="text-accent font-bold uppercase tracking-wider block mb-2 font-montserrat">Lessons Learned</span>
+              <p class="text-textSecondary text-xs font-light leading-relaxed">
+                Significantly improved my skills in responsive web design, dynamic DOM programming with JavaScript, standard debugging workflows, version management in GitHub, and rapid deployments on Vercel.
+              </p>
+            </div>
+          </div>
+
+          <!-- Section 5: Deployments & Repos -->
+          <div id="doc-links" class="scroll-mt-28 flex flex-col gap-4">
+            <h2 class="text-2xl font-bold font-montserrat text-textPrimary tracking-tight">Project Repositories & Deployments</h2>
+            <p class="text-textSecondary text-sm font-light leading-relaxed">
+              Access the live hosted web server or explore the repository version control logs directly:
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 mt-2 font-montserrat text-xs">
+              <a href="https://divyas1012.github.io/dv-fitness" target="_blank" rel="noopener" class="flex-1 p-4 bg-bgPrimary border border-borderPrimary hover:border-accent transition rounded flex items-center gap-3">
+                <i class="fab fa-github text-accent text-xl"></i>
+                <div>
+                  <h4 class="font-bold text-textPrimary">GitHub Deployment</h4>
+                  <p class="text-textSecondary text-[10px] font-light mt-0.5">divyas1012.github.io/dv-fitness</p>
+                </div>
+              </a>
+              <a href="https://dv-fitness.vercel.app" target="_blank" rel="noopener" class="flex-1 p-4 bg-bgPrimary border border-borderPrimary hover:border-accent transition rounded flex items-center gap-3">
+                <i class="fas fa-globe text-accent text-xl"></i>
+                <div>
+                  <h4 class="font-bold text-textPrimary">Vercel Deployment</h4>
+                  <p class="text-textSecondary text-[10px] font-light mt-0.5">dv-fitness.vercel.app</p>
+                </div>
+              </a>
+            </div>
+          </div>
+          
+        </main>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="bg-bgPrimary py-16 border-t border-borderPrimary text-textSecondary text-sm">
+    <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+      <!-- About/Logo -->
+      <div class="flex flex-col gap-4">
+        <a href="index.html#home" class="flex items-center gap-2 text-2xl font-bold text-textPrimary tracking-widest font-bebas">
+          <i class="fas fa-dumbbell text-accent text-xl"></i>
+          <span>D V <span class="text-stroke text-textPrimary">FITNESS</span></span>
+        </a>
+        <p class="font-light text-xs leading-relaxed text-textMuted max-w-xs">Elevate your conditioning at our state of the art gym center. Powered by elite training coaches and heavy duty machines.</p>
+        <span class="text-xs text-textMuted font-montserrat">© 2026 D V Fitness. All Rights Reserved.</span>
+      </div>
+
+      <!-- Quick links -->
+      <div class="flex flex-col gap-4 text-left">
+        <h4 class="text-xs font-bold text-accent uppercase tracking-widest font-montserrat">QUICK LINKS</h4>
+        <div class="flex flex-col gap-2.5 text-xs font-light text-textMuted">
+          <a href="index.html#home" class="hover:text-textPrimary transition">Home</a>
+          <a href="index.html#about" class="hover:text-textPrimary transition">About Us</a>
+          <a href="index.html#equipment" class="hover:text-textPrimary transition">Gym Equipment</a>
+          <a href="index.html#packages" class="hover:text-textPrimary transition">Membership Packages</a>
+          <a href="index.html#reviews" class="hover:text-textPrimary transition">Testimonials</a>
+          <a href="index.html#register" class="hover:text-textPrimary transition">Pre-Register</a>
+        </div>
+      </div>
+
+      <!-- Contact Quick Info -->
+      <div class="flex flex-col gap-4 text-left">
+        <h4 class="text-xs font-bold text-accent uppercase tracking-widest font-montserrat">GET IN TOUCH</h4>
+        <div class="flex flex-col gap-3 text-xs font-light text-textMuted">
+          <p><i class="fas fa-map-marker-alt text-accent mr-2"></i> Sector 4, City Center, Cityville</p>
+          <p><i class="fas fa-phone-alt text-accent mr-2"></i> +91 98765 43210</p>
+          <p><i class="fas fa-envelope text-accent mr-2"></i> support@dvfitness.com</p>
+        </div>
+      </div>
+
+      <!-- Newsletter subscription form -->
+      <div class="flex flex-col gap-4 text-left">
+        <h4 class="text-xs font-bold text-accent uppercase tracking-widest font-semibold">NEWSLETTER</h4>
+        <p class="text-xs font-light text-textMuted leading-relaxed mb-1">Subscribe to receive exclusive workout tips, diet blueprints, and promotional membership discounts.</p>
+        <form id="newsletter-form" class="flex gap-2">
+          <input type="email" placeholder="Your email Address" required class="form-input text-xs px-3.5 py-3 rounded flex-1">
+          <button type="submit" class="bg-accent text-accentInverse font-montserrat font-bold text-xs py-3 px-4 rounded hover:bg-accent/80 transition" aria-label="Subscribe to newsletter">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- T&C links -->
+    <div class="container mx-auto px-6 border-t border-borderPrimary/60 pt-8 flex flex-col sm:flex-row justify-between gap-4 text-xs font-light text-textMuted">
+      <div class="flex gap-4">
+        <a href="#privacy" class="hover:underline">Privacy Policy</a>
+        <span>|</span>
+        <a href="#terms" class="hover:underline">Terms & Conditions</a>
+      </div>
+      <p class="font-montserrat">Designed with premium aesthetics for fitness elites.</p>
+    </div>
+  </footer>
+
+  <!-- Floating chat Widget placeholder -->
+  <div id="chat-widget" class="flex items-end">
+    <!-- Chat window panel -->
+    <div id="chat-window" class="chat-window !h-[480px]">
+      <div class="chat-header">
+        <div class="flex items-center gap-2">
+          <i class="fas fa-dumbbell text-xs animate-bounce text-accentInverse"></i>
+          <span>Virtual Gym Buddy</span>
+        </div>
+        <button id="chat-close" class="text-accentInverse/60 hover:text-accentInverse" aria-label="Close Chat">
+          <i class="fas fa-times text-sm"></i>
+        </button>
+      </div>
+
+      <!-- Hydration Tracker Panel -->
+      <div class="hydration-panel">
+        <div class="flex justify-between items-center text-[10px] font-bold text-textPrimary mb-1.5">
+          <span class="flex items-center gap-1 text-blue-400"><i class="fas fa-tint"></i> Hydration Tracker</span>
+          <span id="water-progress-text" class="text-blue-400">0 / 3000 ml</span>
+        </div>
+        <div class="water-progress-bg mb-2">
+          <div id="water-progress-fill" class="water-progress-fill"></div>
+        </div>
+        <div class="flex gap-2 justify-between">
+          <button onclick="logWater(250)" class="water-log-btn flex-1 text-center font-bold font-montserrat uppercase">+250ml 💧</button>
+          <button onclick="logWater(500)" class="water-log-btn flex-1 text-center font-bold font-montserrat uppercase">+500ml 🥤</button>
+          <button onclick="resetWater()" class="text-[9px] text-textMuted hover:text-accent transition flex items-center justify-center px-2 bg-transparent border-0 outline-none"><i class="fas fa-sync-alt"></i></button>
+        </div>
+      </div>
+
+      <!-- Chat Messages -->
+      <div id="chat-messages" class="chat-messages font-light">
+        <div class="chat-msg bot">
+          Hey gym buddy! 🏋️ I am your Virtual Fitness companion. I can keep you motivated, log your daily water intake, and answer fitness queries!
+        </div>
+      </div>
+
+      <!-- Suggestion chips -->
+      <div class="chat-chips-container">
+        <div class="chat-chip" onclick="triggerQuickReply('Motivate Me 🔥')">Motivate Me 🔥</div>
+        <div class="chat-chip" onclick="triggerQuickReply('Fat Loss Tips 🏋️')">Fat Loss Tips 🏋️</div>
+        <div class="chat-chip" onclick="triggerQuickReply('Build Muscle 💪')">Build Muscle 💪</div>
+        <div class="chat-chip" onclick="triggerQuickReply('Gym Hours 🕒')">Gym Hours 🕒</div>
+      </div>
+
+      <div class="chat-input-wrapper">
+        <input type="text" id="chat-input" placeholder="Ask fitness questions...">
+        <button id="chat-send" aria-label="Send message"><i class="fas fa-paper-plane"></i></button>
+      </div>
+    </div>
+    <!-- Chat trigger button -->
+    <button id="chat-trigger" class="chat-trigger" aria-label="Open Chat Help">
+      <i class="far fa-comment-dots text-lg"></i>
+    </button>
+  </div>
+
+  <!-- Back to top button -->
+  <button id="back-to-top" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- AOS Scroll Animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  
+  <!-- Core JS File -->
+  <script src="./app.js"></script>
+  <script>
+    // Initialize AOS scroll transitions
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: 'ease-out-cubic'
+    });
+  </script>
+</body>
+</html>
